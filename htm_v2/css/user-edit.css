@@ -1,0 +1,47 @@
+.edit-form{
+	padding: 25px;
+}
+.form-footer{
+	float:right;
+}
+.head-top{
+ padding: 5px 22px;
+}
+.btn-primary{
+    background: #fdc006;
+    border: #fdc006;
+}
+.head-top .btn{
+	float: right;
+}
+.head-top h3{
+	display: inline-block;
+}
+.user-edit .edit-form .btn_pad{
+	background: #fff;
+color: #e44e4e;
+font-size: 20px !important;
+float: right;
+padding: 0px;
+}
+.form-footer .btn-one{
+	color: #fff;
+background-color: #0069d9;
+border-color: #0062cc;
+}
+.form-footer .btn-one:hover{
+	background-color: #8f8989;
+border-color: #8f8989;
+}
+.btn-primary:hover{
+    background: #8f8989;
+    border: #8f8989;
+}
+.btn-success{
+background: #8f8989;
+    border: #8f8989;
+}
+.btn-success:hover{
+background-color: #8f8989;
+border-color: #8f8989;
+}

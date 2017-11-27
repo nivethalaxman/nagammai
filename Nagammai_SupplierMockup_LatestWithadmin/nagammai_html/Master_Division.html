@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>NAGAMAI PHARMA</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Google fonts - Rubik -->
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
+    <!-- jQuery Circle-->
+    <link rel="stylesheet" href="css/grasp_mobile_progress_circle-1.0.0.min.css">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="#">
+    <!-- Font Awesome CDN-->
+    <!-- you can replace it by local Font Awesome-->
+    <script src="https://use.fontawesome.com/99347ac47f.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	
+        
+        
+
+	    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.min.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script> 
+
+		<style>
+		
+.th_user{
+   width: 15%!important;
+   text-align:left!important;
+}
+.th_email{
+    width: 15%!important;
+	text-align:left!important;
+}
+.th_Role{
+    width: 15%!important;
+	text-align:left!important;
+}
+.th_edit{
+    width: 15%!important;
+	text-align:left!important;
+}
+.th_Colfive{
+    width: 10%!important;
+   text-align:center!important;	
+}
+.th_Colsix{
+    width: 20%!important;
+	text-align:center!important;	
+}
+.th_Colseven{
+    width: 0%!important;
+	
+}
+		
+   .custom-combobox {
+    position: relative;
+    display: inline-block;
+  }
+  .custom-combobox-toggle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin-left: -1px;
+    padding: 0;
+  }
+  .custom-combobox-input {
+    margin: 0;
+    padding-top: 2px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+  }
+  
+  
+  select.form-control:not([size]):not([multiple]) {
+    height:34px!important;
+}
+		</style>
+		
+<script type="text/javascript">
+		$(document).ready(function() {
+		
+    var activeSystemClass = $('.list-group-item.active');
+
+    //something is entered in search form
+    $('#system-search').keyup( function() {
+       var that = this;
+        // affect all table rows on in systems table
+        var tableBody = $('.table-list-search tbody');
+        var tableRowsClass = $('.table-list-search tbody tr');
+        $('.search-sf').remove();
+        tableRowsClass.each( function(i, val) {
+        
+            //Lower text for case insensitive
+            var rowText = $(val).text().toLowerCase();
+            var inputText = $(that).val().toLowerCase();
+            if(inputText != '')
+            {
+                $('.search-query-sf').remove();
+                tableBody.prepend('<tr class="search-query-sf"><td colspan="6"><strong>Searching for: "'
+                    + $(that).val()
+                    + '"</strong></td></tr>');
+            }
+            else
+            {
+                $('.search-query-sf').remove();
+            }
+
+            if( rowText.indexOf( inputText ) == -1 )
+            {
+                //hide rows
+                tableRowsClass.eq(i).hide();
+                
+            }
+            else
+            {
+                $('.search-sf').remove();
+                tableRowsClass.eq(i).show();
+            }
+        });
+        //all tr elements are hidden
+        if(tableRowsClass.children(':visible').length == 0)
+        {
+            tableBody.append('<tr class="search-sf"><td class="text-muted" colspan="6">No entries found.</td></tr>');
+        }
+    });
+});
+
+function centerModal() {
+    $(this).css('display', 'block');
+    var $dialog = $(this).find(".modal-dialog");
+    var offset = ($(window).height() - $dialog.height()) / 2;
+    // Center modal vertically in window
+    $dialog.css("margin-top", offset);
+}
+
+function filterText()
+	{  
+		var rex = new RegExp($('#combobox').val());
+		if(rex =="/all/"){clearFilter()}else{
+			$('.content').hide();
+			$('.content').filter(function() {
+			return rex.test($(this).text());
+			}).show();
+	}
+	}
+	
+function clearFilter()
+	{
+		$('.combobox').val('');
+		$('.content').show();
+	}
+
+
+$('.modal').on('show.bs.modal', centerModal);
+$(window).on("resize", function () {
+    $('.modal:visible').each(centerModal);
+});
+
+
+$( function() {
+    $.widget( "custom.combobox", {
+      _create: function() {
+        this.wrapper = $( "<span>" )
+          .addClass( "custom-combobox" )
+          .insertAfter( this.element );
+ 
+        this.element.hide();
+        this._createAutocomplete();
+        this._createShowAllButton();
+      },
+ 
+      _createAutocomplete: function() {
+        var selected = this.element.children( ":selected" ),
+          value = selected.val() ? selected.text() : "";
+ 
+        this.input = $( "<input>" )
+          .appendTo( this.wrapper )
+          .val( value )
+          .attr( "title", "" )
+          .addClass( "custom-combobox-input ui-widget ui-widget-content ui-state-default ui-corner-left" )
+          .autocomplete({
+            delay: 0,
+            minLength: 0,
+            source: $.proxy( this, "_source" )
+          })
+          .tooltip({
+            classes: {
+              "ui-tooltip": "ui-state-highlight"
+            }
+          });
+ 
+        this._on( this.input, {
+          autocompleteselect: function( event, ui ) {
+            ui.item.option.selected = true;
+            this._trigger( "select", event, {
+              item: ui.item.option
+            });
+          },
+ 
+          autocompletechange: "_removeIfInvalid"
+        });
+      },
+ 
+      _createShowAllButton: function() {
+        var input = this.input,
+          wasOpen = false
+ 
+        $( "<a>" )
+          .attr( "tabIndex", -1 )
+          .attr( "title", "Show All Items" )
+          .attr( "height", "" )
+          .tooltip()
+          .appendTo( this.wrapper )
+          .button({
+            icons: {
+              primary: "ui-icon-triangle-1-s"
+            },
+            text: "false"
+          })
+          .removeClass( "ui-corner-all" )
+          .addClass( "custom-combobox-toggle ui-corner-right" )
+          .on( "mousedown", function() {
+            wasOpen = input.autocomplete( "widget" ).is( ":visible" );
+          })
+          .on( "click", function() {
+            input.trigger( "focus" );
+ 
+            // Close if already visible
+            if ( wasOpen ) {
+              return;
+            }
+ 
+            // Pass empty string as value to search for, displaying all results
+            input.autocomplete( "search", "" );
+          });
+      },
+ 
+      _source: function( request, response ) {
+        var matcher = new RegExp( $.ui.autocomplete.escapeRegex(request.term), "i" );
+        response( this.element.children( "option" ).map(function() {
+          var text = $( this ).text();
+          if ( this.value && ( !request.term || matcher.test(text) ) )
+            return {
+              label: text,
+              value: text,
+              option: this
+            };
+        }) );
+      },
+ 
+      _removeIfInvalid: function( event, ui ) {
+ 
+        // Selected an item, nothing to do
+        if ( ui.item ) {
+          return;
+        }
+ 
+        // Search for a match (case-insensitive)
+        var value = this.input.val(),
+          valueLowerCase = value.toLowerCase(),
+          valid = false;
+        this.element.children( "option" ).each(function() {
+          if ( $( this ).text().toLowerCase() === valueLowerCase ) {
+            this.selected = valid = true;
+            return false;
+          }
+        });
+ 
+        // Found a match, nothing to do
+        if ( valid ) {
+          return;
+        }
+ 
+        // Remove invalid value
+        this.input
+          .val( "" )
+          .attr( "title", value + " didn't match any item" )
+          .tooltip( "open" );
+        this.element.val( "" );
+        this._delay(function() {
+          this.input.tooltip( "close" ).attr( "title", "" );
+        }, 2500 );
+        this.input.autocomplete( "instance" ).term = "";
+      },
+ 
+      _destroy: function() {
+        this.wrapper.remove();
+        this.element.show();
+      }
+    });
+ 
+    $( "#combobox" ).combobox();
+    $( "#toggle" ).on( "click", function() {
+	
+      $( "#combobox" ).toggle();
+	  
+    });
+  } );
+
+	</script>
+    </head>
+    <body>
+
+        <nav class="side-navbar">
+      <div class="side-navbar-wrapper">
+        <div class="sidenav-header d-flex align-items-center justify-content-center">
+          <h1>NAGAMMAI PHARMA</h1>
+        </div>
+        <div class="main-menu">
+          <ul id="side-main-menu" class="side-menu list-unstyled">   
+          <li> <a href="#pages-nav-list" data-toggle="collapse" aria-expanded="false"><i class="fa fa-file-text-o" aria-hidden="true"></i>
+                <span>Admin</span>
+                <div class="arrow pull-right"><i class="fa fa-angle-up"></i></div></a>
+                <ul id="pages-nav-list" class="collapse list-unstyled">
+				<li ><a href="users.html"><span>Users</span></a></li>
+                <li> <a href="cfa_titles.html"><span>CFA Titles</span></a></li>
+                <li> <a href="marketing_titles.html"><span>Marketing Titles</span></a></li>
+                <li> <a href="sync.html"><span>Sync</span></a></li>
+                <li> <a href="email_sync.html"><span>Send mail</span></a></li>
+                <li> <a href="received_sync.html"><span>Receive mail</span></a></li>
+				<li> <a href="payment_terms.html"><span>Payment Terms</span></a></li>
+                </ul>
+            </li>	
+			<li> <a href="#pages-nav-list2" data-toggle="collapse" aria-expanded="false"><i class="fa fa-file-text-o" aria-hidden="true"></i>
+                <span>Masters</span>
+                <div class="arrow pull-right"><i class="fa fa-angle-up"></i></div></a>
+                <ul id="pages-nav-list2" class="collapse list-unstyled">
+				  <li ><a href="Master_Supplier .html"><span>Suppliers</span></a></li>
+                  <li ><a href="Master_Manuf.html"><span>Manufacturers</span></a></li>
+                  <li ><a href="Master_Division.html"><span>Divisions</span></a></li>
+				  <li><a href="contact.html"><span>Contacts</span></a></li>
+				  <li class=""><a href="StdOperatingProcedure.html"><span>SOP</span></a></li>
+                </ul>
+            </li>
+		  <li class=""><a href="ViewEvents.html"><span>Appointments</span></a></li>
+		  <li class=""><a href="Email.html"><span>Email</span></a></li>
+		  <li class=""><a href="POGR.html"><span>POGR</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+	 <div class="page home-page">
+      <!-- navbar-->
+      <header class="header">
+        <nav class="navbar">
+          <div class="container-fluid">
+            <div class="navbar-holder d-flex align-items-center justify-content-between">
+              <div class="navbar-header"><a id="toggle-btn" href="#" class="menu-btn"><i class="fa fa-bars" aria-hidden="true"></i> </i></a><a href="index.html" class="navbar-brand">
+                  <!-- <div class="brand-text hidden-sm-down"><strong class="text-primary">Glider Tech Automation</strong></div> --></a></div>
+              <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
+                <li class="nav-item"><a href="login.html" class="nav-link logout">Logout<i class="fa fa-power-off"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+	  
+	  
+	   <section class="updates section-padding section_top users_admin">
+        <div class="container-fluid">  
+          <!-- Daily Feed-->
+            <header> 
+            <h1 class="h3 display">Divisions</h1>
+
+          </header>
+	<div class="row" style="margin-bottom:30px;">
+	<div class="col-md-3">
+	 <label>Manufacturers: </label>
+      <select id="combobox" class="selectpicker" data-live-search="true" onchange='return filterText();'>
+                 <option value="10">GENERAL</option>
+                <option value="100">UNICHEM</option>
+                <option value="101">WOCKHARDT-FOOD DIVISION</option>
+                <option value="102">VITALIS-CIPLA</option>
+                <option value="103">BERGEN-ALKEM LABS LTD</option>
+                <option value="104">RADIANT-SUN DIVISION</option>
+                <option value="105">FUTURA-DR.REDDY S</option>
+                <option value="106">CND-ZYDUS</option>
+                <option value="107">PSYCAN-TORRENT</option>
+                <option value="112">ENTEROPLUS-GLAXO WELLCOME</option>
+                <option value="110">MIND-TORRENT</option>
+                <option value="111">VISTA-TORRENT</option>
+      </select>
+	</div>
+			<div class="col-md-3">
+            <form action="#" method="get">
+                <div class="input-group">
+                    <!-- USE TWITTER TYPEAHEAD JSON WITH API TO SEARCH -->
+                    <input class="form-control" id="system-search" name="q" placeholder="Search for Division" >
+                    <span class="input-group-btn">
+                        <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                    </span>
+                </div>
+            </form>
+        </div>
+		</div>		  
+    	 <table class="table table-list-search">
+                    <thead>
+					<tr class="tbl-header">
+                        <th class="th_user">Div Code</th>
+						<th class="th_user">Name</th>
+						<th class="th_edit">Email</th>
+                        <th class="th_Role">Phone</th>
+						<th class="th_email">Address</th>
+						<th class="th_Colfive">Edit</th>
+                        <th class="th_Colsix">Contacts</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="content">
+                            <td>10</td>
+                            <td>JOHNSON&JOHNSON MAXIM</td>
+							<td>rameshb.pharma@gmail.com</td>
+                            <td>9486692991</td>
+							<td>NO.8 BALAJI NAGAR EXTN</td>
+							<td class="th_Colfive"><a href="Master_AddNewFieldsDiv.html"><button type="button" class="btn btn_pad"><i class="fa fa-pencil-square-o pad2" aria-hidden="true"></i></button></td>
+							<td class="th_Colsix"><a href="Master_ViewContforDiv.html"><button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal">Contacts</button></td> 	
+                        </tr>
+                        <tr class="content">
+                            <td>100</td>
+                            <td>DR.REDDY S-AQURA</td>
+							<td>sunface23saravana@yahoo.in</td>
+                            <td>2323149</td>
+							<td>2/29 JAL NAICKEN STREET</td>
+							<td class="th_Colfive"><a href="Master_AddNewFieldsDiv.html"><button type="button" class="btn btn_pad"><i class="fa fa-pencil-square-o pad2" aria-hidden="true"></i></button></td>
+							<td class="th_Colsix"><a href="Master_ViewContforDiv.html"><button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal">Contacts</button></td>
+                        </tr>
+                        <tr class="content">
+                            <td>101</td>
+                            <td>ALKEM BERGEN</td>
+							<td>baazebra@yahoo.co.in</td>
+                            <td>9344143114</td>
+							<td>KAMAKSHI COLONY,</td>
+							<td class="th_Colfive"><a href="Master_AddNewFieldsDiv.html"><button type="button" class="btn btn_pad"><i class="fa fa-pencil-square-o pad2" aria-hidden="true"></i></button></td>
+							<td class="th_Colsix"><a href="Master_ViewContforDiv.html"><button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal">Contacts</button></td>
+                        </tr>
+						 <tr class="content">
+                            <td>102</td>
+                            <td>ALKEM BERGEN</td>
+							<td>baazebra@yahoo.co.in</td>
+                            <td>9344143114</td>
+							<td>KAMAKSHI COLONY,</td>
+							<td class="th_Colfive"><a href="Master_AddNewFieldsDiv.html"><button type="button" class="btn btn_pad"><i class="fa fa-pencil-square-o pad2" aria-hidden="true"></i></button></td>
+							<td class="th_Colsix"><a href="Master_ViewContforDiv.html"><button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal">Contacts</button></td>
+                        </tr>
+						 <tr class="content">
+                            <td>103</td>
+                            <td>ALKEM BERGEN</td>
+							<td>baazebra@yahoo.co.in</td>
+                            <td>9344143114</td>
+							<td>KAMAKSHI COLONY,</td>
+							<td class="th_Colfive"><a href="Master_AddNewFieldsDiv.html"><button type="button" class="btn btn_pad"><i class="fa fa-pencil-square-o pad2" aria-hidden="true"></i></button></td>
+							<td class="th_Colsix"><a href="Master_ViewContforDiv.html"><button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal">Contacts</button></td>
+							
+                        </tr>
+						 <tr class="content">
+                            <td>104</td>
+                            <td>ALKEM BERGEN</td>
+							<td>baazebra@yahoo.co.in</td>
+                            <td>9344143114</td>
+							<td>KAMAKSHI COLONY,</td>
+							<td class="th_Colfive"><a href="Master_AddNewFieldsDiv.html"><button type="button" class="btn btn_pad"><i class="fa fa-pencil-square-o pad2" aria-hidden="true"></i></button></td>
+							<td class="th_Colsix"><a href="Master_ViewContforDiv.html"><button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal">Contacts</button></td>
+                        </tr>
+                    </tbody>
+                </table> 
+		 <nav aria-label="Page navigation example" id="page_slider">
+          <h1>Page 1 0f 5  
+          <ul class="pagination">
+            <li class="page-item">
+              <a class="page-link" href="#">Previous</a>
+            </li>          
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">4</a></li>
+            <li class="page-item"><a class="page-link" href="#">5..</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#">Next</a>
+            </li>
+          </ul></h1>
+        </nav>                  
+          
+        </div>
+      </section>
+      <footer class="main-footer">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-6">
+              <p>@copyright reserved by NAGAMMAI PHARMA</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- Javascript files-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="js/tether.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.cookie.js"> </script>
+    <script src="js/grasp_mobile_progress_circle-1.0.0.min.js"></script>
+    <script src="js/jquery.nicescroll.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script src="js/charts-home.js"></script>
+    <script src="js/front.js"></script>
+    <script src="js/slimscroll.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('.scroll').slimScroll({});
+      });
+    </script>   
+	</body>
+</html>

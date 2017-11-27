@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>NAGAMAI PHARMA</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Google fonts - Rubik -->
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
+    <!-- jQuery Circle-->
+    <link rel="stylesheet" href="css/grasp_mobile_progress_circle-1.0.0.min.css">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="#">
+    <!-- Font Awesome CDN-->
+    <!-- you can replace it by local Font Awesome-->
+    <script src="https://use.fontawesome.com/99347ac47f.js"></script>
+  </head>
+  <body>
+    <!-- Side Navbar -->
+    <nav class="side-navbar">
+      <div class="side-navbar-wrapper">
+        <div class="sidenav-header d-flex align-items-center justify-content-center">
+          <h1>NAGAMMAI PHARMA</h1>
+        </div>
+        <div class="main-menu">
+          <ul id="side-main-menu" class="side-menu list-unstyled">   
+          <li> <a href="#pages-nav-list" data-toggle="collapse" aria-expanded="false"><i class="fa fa-file-text-o" aria-hidden="true"></i>
+                <span>Admin</span>
+                <div class="arrow pull-right"><i class="fa fa-angle-up"></i></div></a>
+                <ul id="pages-nav-list" class="collapse list-unstyled">
+				<li ><a href="users.html"><span>Users</span></a></li>
+                <li> <a href="cfa_titles.html"><span>CFA Titles</span></a></li>
+                <li> <a href="marketing_titles.html"><span>Marketing Titles</span></a></li>
+                <li> <a href="sync.html"><span>Sync</span></a></li>
+                <li> <a href="email_sync.html"><span>Send mail</span></a></li>
+                <li> <a href="received_sync.html"><span>Receive mail</span></a></li>
+				<li> <a href="payment_terms.html"><span>Payment Terms</span></a></li>
+                </ul>
+            </li>	
+			<li> <a href="#pages-nav-list2" data-toggle="collapse" aria-expanded="false"><i class="fa fa-file-text-o" aria-hidden="true"></i>
+                <span>Masters</span>
+                <div class="arrow pull-right"><i class="fa fa-angle-up"></i></div></a>
+                <ul id="pages-nav-list2" class="collapse list-unstyled">
+				  <li ><a href="Master_Supplier .html"><span>Suppliers</span></a></li>
+                  <li ><a href="Master_Manuf.html"><span>Manufacturers</span></a></li>
+                  <li ><a href="Master_Division.html"><span>Divisions</span></a></li>
+				  <li><a href="contact.html"><span>Contacts</span></a></li>
+				  <li class=""><a href="StdOperatingProcedure.html"><span>SOP</span></a></li>
+                </ul>
+            </li>
+		  <li class=""><a href="ViewEvents.html"><span>Appointments</span></a></li>
+		  <li class=""><a href="Email.html"><span>Email</span></a></li>
+		  <li class=""><a href="POGR.html"><span>POGR</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="page home-page">
+      <!-- navbar-->
+      <header class="header">
+        <nav class="navbar">
+          <div class="container-fluid">
+            <div class="navbar-holder d-flex align-items-center justify-content-between">
+              <div class="navbar-header"><a id="toggle-btn" href="#" class="menu-btn"><i class="fa fa-bars" aria-hidden="true"></i> </i></a><a href="index.html" class="navbar-brand">
+                  <!-- <div class="brand-text hidden-sm-down"><strong class="text-primary">Glider Tech Automation</strong></div> --></a></div>
+              <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
+                <li class="nav-item"><a href="login.html" class="nav-link logout">Logout<i class="fa fa-power-off"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      
+      
+      <!-- Updates Section -->
+      <section class="updates section-padding section_top users_admin">
+        <div class="container-fluid">  
+          <!-- Daily Feed-->
+            <header> 
+            <h1 class="h3 display">Users</h1>
+          </header>
+                  <a href="add_user.html" class="btn_add" data-target="#exampleModalLabel"><i class="fa fa-plus" aria-hidden="true"></i></a>
+                  <table class="table table-striped table-sm table_front table-fixed">
+                    <thead>
+                      <tr class="tbl-header">
+                        <th class="th_user">User Name</th>
+                        <th class="th_email">Email ID</th>
+                        <th class="th_Role">Role</th>
+                        <th style="width: 30%;text-align: center;">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody class="scroll">
+                      <tr>
+                        <td class="th_user">Anand</td>
+                        <td class="th_email">anand@gmail.com</td>
+                        <td class="th_Role">Manager</td>
+                        <td class="th_edit"><a href="user_edit.html">Edit</a>&nbsp;|&nbsp;<a href="assign_supplier.html">Assign</a></td>
+                        <td lass="th_delete"><button type="button" class="btn btn_pad" onclick="deleteRow(this)"> <i class="fa fa-trash-o pad" aria-hidden="true"></i> </button></td>
+                      </tr>
+                      <tr>
+                        <td class="th_user">Rama Devi</td>
+                        <td class="th_email">ramadevi01@gmail.com</td>
+                        <td class="th_Role">Manager</td>
+                        <td class="th_edit"><a href="Edit.html">Edit</a>&nbsp;|&nbsp;<a href="assign_supplier.html">Assign</a></td>
+                        <td lass="th_delete"><button type="button" class="btn btn_pad" onclick="deleteRow(this)"> <i class="fa fa-trash-o pad" aria-hidden="true"></i> </button></td>
+                      </tr>
+                      <tr>
+                        <td class="th_user">Priya</td>
+                        <td class="th_email">Priya.tamil98@gmail.com</td>
+                        <td class="th_Role">Admin</td>
+                        <td class="th_edit"><a href="user_edit.html">Edit</a></td>
+                        <td lass="th_delete"><button type="button" class="btn btn_pad" onclick="deleteRow(this)"> <i class="fa fa-trash-o pad" aria-hidden="true"></i> </button></td>
+                      </tr>                      
+                      <tr>
+                        <td class="th_user">Sumathi</td>
+                        <td class="th_email">sumathi.kumaresan@gmail.com</td>
+                        <td class="th_Role">Manager</td>
+                        <td class="th_edit"><a href="user_edit.html">Edit</a>&nbsp;|&nbsp;<a href="assign_supplier.html">Assign</a></td>
+                        <td lass="th_delete"><button type="button" class="btn btn_pad" onclick="deleteRow(this)"> <i class="fa fa-trash-o pad" aria-hidden="true"></i> </button></td>
+                      </tr>
+                      <tr>
+                        <td class="th_user">Mani</td>
+                        <td class="th_email">mani.balan@gmail.com</td>
+                        <td class="th_Role">Admin</td>
+                        <td class="th_edit"><a href="user_edit.html">Edit</a></td>
+                        <td lass="th_delete"><button type="button" class="btn btn_pad" onclick="deleteRow(this)"> <i class="fa fa-trash-o pad" aria-hidden="true"></i> </button></td>
+                      </tr>
+                      <tr>
+                        <td class="th_user">Kavya</td>
+                        <td class="th_email">kavya2002@gmail.com</td>
+                        <td class="th_Role">Admin</td>
+                        <td class="th_edit"><a href="user_edit.html">Edit</a></td>
+                        <td lass="th_delete"><button type="button" class="btn btn_pad" onclick="deleteRow(this)"> <i class="fa fa-trash-o pad" aria-hidden="true"></i> </button></td>
+                      </tr>                      
+                      <tr>
+                        <td class="th_user">Mathan</td>
+                        <td class="th_email">mathankumar@gmail.com</td>
+                        <td class="th_Role">Manager</td>
+                        <td class="th_edit"><a href="Edit.html">Edit</a>&nbsp;|&nbsp;<a href="assign_supplier.html">Assign</a></td>
+                        <td lass="th_delete"><button type="button" class="btn btn_pad" onclick="deleteRow(this)"> <i class="fa fa-trash-o pad" aria-hidden="true"></i> </button></td>
+                      </tr>
+                      <tr>
+                        <td class="th_user">Bhavana</td>
+                        <td class="th_email">bhavana@gmail.com</td>
+                        <td class="th_Role">Admin</td>
+                        <td class="th_edit"><a href="Edit.html">Edit</a></td>
+                        <td lass="th_delete"><button type="button" class="btn btn_pad" onclick="deleteRow(this)"> <i class="fa fa-trash-o pad" aria-hidden="true"></i> </button></td>
+                      </tr>
+                      <tr>
+                        <td class="th_user">Bhathra</td>
+                        <td class="th_email">bathra987@gamil.com</td>
+                        <td class="th_Role">Manager</td>
+                        <td class="th_edit"><a href="Edit.html">Edit</a></td>
+                        <td lass="th_delete"><button type="button" class="btn btn_pad" onclick="deleteRow(this)"> <i class="fa fa-trash-o pad" aria-hidden="true"></i> </button></td>
+                      </tr>
+                      <tr>
+                        <td class="th_user">Nagamani</td>
+                        <td class="th_email">nagamani.balan@gmail.com</td>
+                        <td class="th_Role">Admin</td>
+                        <td class="th_edit"><a href="Edit.html">Edit</a></td>
+                        <td lass="th_delete"><button type="button" class="btn btn_pad" onclick="deleteRow(this)"> <i class="fa fa-trash-o pad" aria-hidden="true"></i> </button></td>
+                      </tr>
+                      <tr>
+                        <td class="th_user">Balan</td>
+                        <td class="th_email">balan.cbe@gmail.com</td>
+                        <td class="th_Role">Admin</td>
+                        <td class="th_edit"><a href="Edit.html">Edit</a></td>
+                        <td lass="th_delete"><button type="button" class="btn btn_pad" onclick="deleteRow(this)"> <i class="fa fa-trash-o pad" aria-hidden="true"></i> </button></td>
+                      </tr>
+                      <tr>
+                        <td class="th_user">Kumaresan</td>
+                        <td class="th_email">kumaresan.coimbatore@gmail.com</td>
+                        <td class="th_Role">Admin</td>
+                        <td class="th_edit"><a href="Edit.html">Edit</a></td>
+                        <td lass="th_delete"><button type="button" class="btn btn_pad" onclick="deleteRow(this)"> <i class="fa fa-trash-o pad" aria-hidden="true"></i> </button></td>
+                      </tr>
+                      <tr>
+                        <td class="th_user">Lashmi</td>
+                        <td class="th_email">lashmi.ramasamy@gmail.com</td>
+                        <td class="th_Role">Admin</td>
+                        <td class="th_edit"><a href="Edit.html">Edit</a></td>
+                        <td lass="th_delete"><button type="button" class="btn btn_pad"onclick="deleteRow(this)"> <i class="fa fa-trash-o pad" aria-hidden="true"></i> </button></td>
+                      </tr>
+                      <tr>
+                        <td class="th_user">Jothi</td>
+                        <td class="th_email">Jothi.selvaraj@gmai.com</td>
+                        <td class="th_Role">Manager</td>
+                        <td class="th_edit"><a href="Edit.html">Edit</a></td>
+                        <td lass="th_delete"><button type="button" class="btn btn_pad"onclick="deleteRow(this)"> <i class="fa fa-trash-o pad" aria-hidden="true"></i> </button></td>
+                      </tr>
+                      <tr>
+                        <td class="th_user">Selvam</td>
+                        <td class="th_email">selva.cbe43@gmail.com</td>
+                        <td class="th_Role">Admin</td>
+                        <td class="th_edit"><a href="Edit.html">Edit</a></td>
+                        <td lass="th_delete"><button type="button" class="btn btn_pad"onclick="deleteRow(this)"> <i class="fa fa-trash-o pad" aria-hidden="true"></i> </button></td>
+                      </tr>
+                      <tr>
+                        <td class="th_user">Bharath Kishore</td>
+                        <td class="th_email">kishore.kannan@adcltech.com</td>
+                        <td class="th_Role">Admin</td>
+                        <td class="th_edit"><a href="Edit.html">Edit</a></td>
+                        <td lass="th_delete"><button type="button" class="btn btn_pad"onclick="deleteRow(this)"> <i class="fa fa-trash-o pad" aria-hidden="true"></i> </button></td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+        <nav aria-label="Page navigation example" id="page_slider">
+          <h1>Page 1 0f 5  
+          <ul class="pagination">
+            <li class="page-item">
+              <a class="page-link" href="#">Previous</a>
+            </li>          
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">4</a></li>
+            <li class="page-item"><a class="page-link" href="#">5..</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#">Next</a>
+            </li>
+          </ul></h1>
+        </nav>                  
+          
+        </div>
+      </section>
+      <footer class="main-footer">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-6">
+              <p>@copyright reserved by NAGAMMAI PHARMA</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+     <script>
+function deleteRow(btn) {
+  var row = btn.parentNode.parentNode;
+  row.parentNode.removeChild(row);
+}
+</script>
+    <!-- Javascript files-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="js/tether.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.cookie.js"> </script>
+    <script src="js/grasp_mobile_progress_circle-1.0.0.min.js"></script>
+    <script src="js/jquery.nicescroll.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script src="js/charts-home.js"></script>
+    <script src="js/front.js"></script>
+    <script src="js/slimscroll.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('.scroll').slimScroll({});
+      });
+    </script>    
+  </body>
+</html>

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>NAGAMAI PHARMA</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Google fonts - Rubik -->
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
+    <!-- jQuery Circle-->
+    <link rel="stylesheet" href="css/grasp_mobile_progress_circle-1.0.0.min.css">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="#">
+    <!-- Font Awesome CDN-->
+    <!-- you can replace it by local Font Awesome-->
+    <script src="https://use.fontawesome.com/99347ac47f.js"></script>
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	
+	<style>
+.th_user{
+    width: 25%!important;
+	text-align:left!important;
+}
+.th_email{
+    width: 15%!important;
+	text-align:left!important;
+}
+.th_Role{
+    width: 15%!important;
+}
+.th_edit{
+    width: 10%!important;
+}
+.th_Colfive{
+    width: 15%;	
+}
+.th_Colsix{
+    width: 10%!important;
+}
+.th_Colseven{
+    width: 10%!important;
+	
+}
+   
+	</style>
+	<script type="text/javascript">
+		
+		$(document).ready(function() {
+  $("#Marketing-id").show();
+	$("#CFA-id").hide();
+    $("#watch-me").click(function() {
+        $("#Marketing-id").hide();
+        $("#CFA-id").show();
+    });
+	$("#see-me").click(function() {
+        $("#CFA-id").hide();
+        $("#Marketing-id").show();
+    });
+});
+
+function centerModal() {
+    $(this).css('display', 'block');
+    var $dialog = $(this).find(".modal-dialog");
+    var offset = ($(window).height() - $dialog.height()) / 2;
+    // Center modal vertically in window
+    $dialog.css("margin-top", offset);
+}
+
+$('.modal').on('show.bs.modal', centerModal);
+$(window).on("resize", function () {
+    $('.modal:visible').each(centerModal);
+});
+
+
+ 
+		</script>
+  </head>
+  <body>
+    <!-- Side Navbar -->
+   <nav class="side-navbar">
+      <div class="side-navbar-wrapper">
+        <div class="sidenav-header d-flex align-items-center justify-content-center">
+          <h1>NAGAMMAI PHARMA</h1>
+        </div>
+        <div class="main-menu">
+          <ul id="side-main-menu" class="side-menu list-unstyled">   
+          <li> <a href="#pages-nav-list" data-toggle="collapse" aria-expanded="false"><i class="fa fa-file-text-o" aria-hidden="true"></i>
+                <span>Admin</span>
+                <div class="arrow pull-right"><i class="fa fa-angle-up"></i></div></a>
+                <ul id="pages-nav-list" class="collapse list-unstyled">
+                <li ><a href="users.html"><span>Users</span></a></li>
+                <li> <a href="cfa_titles.html"><span>CFA Titles</span></a></li>
+                <li> <a href="marketing_titles.html"><span>Marketing Titles</span></a></li>
+                <li> <a href="sync.html"><span>Sync</span></a></li>
+                <li> <a href="email_sync.html"><span>Send mail</span></a></li>
+                <li> <a href="received_sync.html"><span>Receive mail</span></a></li>
+                <li> <a href="payment_terms.html"><span>Payment Terms</span></a></li>
+                </ul>
+            </li>    
+            <li> <a href="#pages-nav-list2" data-toggle="collapse" aria-expanded="false"><i class="fa fa-file-text-o" aria-hidden="true"></i>
+                <span>Masters</span>
+                <div class="arrow pull-right"><i class="fa fa-angle-up"></i></div></a>
+                <ul id="pages-nav-list2" class="collapse list-unstyled">
+                  <li ><a href="Master_Supplier .html"><span>Suppliers</span></a></li>
+                  <li ><a href="Master_Manuf.html"><span>Manufacturers</span></a></li>
+                  <li ><a href="Master_Division.html"><span>Divisions</span></a></li>
+                  <li><a href="contact.html"><span>Contacts</span></a></li>
+                  <li class=""><a href="StdOperatingProcedure.html"><span>SOP</span></a></li>
+                </ul>
+            </li>
+          <li class=""><a href="ViewEvents.html"><span>Appointments</span></a></li>
+          <li class=""><a href="Email.html"><span>Email</span></a></li>
+          <li class=""><a href="POGR.html"><span>POGR</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="page home-page">
+      <!-- navbar-->
+      <header class="header">
+        <nav class="navbar">
+          <div class="container-fluid">
+            <div class="navbar-holder d-flex align-items-center justify-content-between">
+              <div class="navbar-header"><a id="toggle-btn" href="#" class="menu-btn"><i class="fa fa-bars" aria-hidden="true"></i> </i></a><a href="index.html" class="navbar-brand">
+                  <!-- <div class="brand-text hidden-sm-down"><strong class="text-primary">Glider Tech Automation</strong></div> --></a></div>
+              <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
+                <li class="nav-item"><a href="login.html" class="nav-link logout">Logout<i class="fa fa-power-off"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      
+	<section class="updates section-padding section_top users_admin">
+        <div class="container-fluid">  
+          <!-- Daily Feed-->
+          
+  
+    	<div class="container">
+		 <header> 
+            <h1 class="h3 display">Standard Operating Procedure</h1>
+          </header>   
+    <form class="form-horizontal" method="post"
+          action="#">
+        <!-- Text input-->
+        <div class="form-group">
+              <div class="row" id="SuplrDiv">						 
+                                <div class="col-md-4">
+                                    <label for="name" class="cols-sm-2 control-label">Supplier</label>
+                                    <div class="cols-sm-10">
+                                        <div class="input-group">										   
+                                            <select class="form-control input-lg" name="DrpSupplier">
+											<option value="Senthil Medicals">MSD PHARMACEUTICALS PVT LTD</option>
+											<option value="Shanthi Social Service">BURGEON INDIA PVT LTD</option>
+											<option value="Sri Venkateswara pharmacies">MC MEDICAL SERVICES  Pvt LTD</option>
+											<option value="New Star Medicals">CUDDALORE VACCINES</option>
+									     	</select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="name" class="cols-sm-2 control-label">Manufacturer</label>
+                                    <div class="cols-sm-10">
+                                        <div class="input-group">
+                                          <select class="form-control input-lg" name="DrpMaf">
+											<option value="VITALIS-CIPLA">VITALIS-CIPLA</option>
+											<option value="BERGEN-ALKEM LABS LTD">BERGEN-ALKEM LABS LTD</option>
+											<option value="RADIANT-SUN DIVISION">RADIANT-SUN DIVISION</option>
+											<option value="CND-ZYDUS">CND-ZYDUS</option>
+											</select>
+                                        </div>
+                                       
+                                    </div>
+                                </div>
+                         
+                                <div class="col-md-4">
+                                    <label for="name" class="cols-sm-2 control-label">Division</label>
+                                    <div class="cols-sm-10">
+                                        <div class="input-group">
+                                            <select class="form-control input-lg" name="DrpDiv">
+											<option value="MANKIND-LIFESTAR">MANKIND-LIFESTAR</option>
+											<option value="MOVA PHARMA">MOVA PHARMA</option>
+											<option value="JOHNSON & JOHNSON DERMA">JOHNSON & JOHNSON DERMA</option>
+											<option value="GERMAN REMEDIES">GERMAN REMEDIES</option>
+									     	</select>
+                                        </div>
+                                    </div>
+                                </div>                               
+                            </div><br/>
+		  
+
+            <div class="row">
+			
+			
+			 <div class="col-md-4">
+			    <label class="col-md-4 control-label" for="name">Order Type</label>
+                <input id="name" name="name" type="text" placeholder="Order Type" class="form-control input-md">	
+				 </div>
+				
+				
+            </div>
+			 <div class="row">
+			    <div class="col-md-6">
+				   <label class="col-md-4 control-label" for="name">Payment Terms</label>
+				   <input id="name" name="name" type="text" placeholder="" class="form-control input-md">	
+                   
+				 </div>
+			 </div>
+			  <div class="row">
+			    <div class="col-md-8">
+				   <label class="col-md-6 control-label" for="name">Special Offers </label><br>
+					 <textarea  style="border-color:#337ab7!important;width:90%" rows="4" id="Notes"></textarea>	
+				 </div>				
+			 </div>
+			  <div class="row">
+			    <div class="col-md-8">
+				   <label class="col-md-4 control-label" for="name">Claims Extra Offers / SOP</label>
+                    <textarea  style="border-color:#337ab7!important;width:90%" rows="4" id="Notes"></textarea>
+			
+				 </div>
+			 </div>
+			  <div class="row">
+			    <div class="col-md-8">
+				   <label class="col-md-4 control-label" for="name">Expiry / Broken Settlement </label>
+                    <textarea  style="border-color:#337ab7!important;width:90%" rows="4" id="Notes"></textarea>
+			
+				 </div>
+			 </div>
+			
+			 <div class="row">
+			    <div class="col-md-8">
+				   <label class="col-md-4 control-label" for="name">Delivery & Order Schedule</label>
+                   <select class="form-control input-lg" name="dispatchmode" type="multiple">
+											<option value="Monday">Monday</option>
+											<option value="Tuesday">Tuesday</option>
+											<option value="Wednesday">Wednesday</option>	
+										   <option value="Thursday">Thursday</option>	
+										   <option value="Friday">Friday</option>
+										   </select>
+				 </div>
+				 
+			 </div>
+			<br/>
+			 <div class="row">
+			    <div class="col-md-8">
+				   <label class="col-md-4 control-label" for="name">Monthly appointment</label>
+                    <input id="name" name="name"  placeholder="Appointment Date" type="date" class="form-control input-md">			
+				 </div>
+				 
+			 </div>
+			  
+			
+			 <div class="row">
+			 <div class="col-md-6">
+				   <label class="col-md-4 control-label" for="name">Dispatch Mode</label>
+                                         <input id="name" name="name" type="text" placeholder="Dispatch Mode" class="form-control input-md">			
+				 </div>
+			</div>
+			<br/>
+			<br/>
+			
+			  <div class="row" >
+			    <div class="col-md-6">
+				   <label class="col-md-6 control-label" for="name">Current N/S</label>
+                    <input id="name" name="name" type="text"  value="" class="form-control input-md">			
+				 </div>
+				  <div class="col-md-6">
+				   <label class="col-md-6 control-label" for="name">Current M/S</label>
+                     <input id="name" name="name" type="text"  value="" class="form-control input-md">																		
+				 </select>			
+				 </div>
+			 </div>
+			 <br/>
+			
+			 
+        </div>        
+    </form>
+	<a id="submit" name="save" class="btn btn-success" href="#">
+                    Save</a>
+</div>
+ 
+        </div>
+      </section>
+      <footer class="main-footer">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-6">
+              <p>@copyright reserved by NAGAMMAI PHARMA</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- Javascript files-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="js/tether.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.cookie.js"> </script>
+    <script src="js/grasp_mobile_progress_circle-1.0.0.min.js"></script>
+    <script src="js/jquery.nicescroll.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script src="js/charts-home.js"></script>
+    <script src="js/front.js"></script>
+    <script src="js/slimscroll.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('.scroll').slimScroll({});
+      });
+    </script>    
+  </body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>NAGAMAI PHARMA</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Google fonts - Rubik -->
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
+    <!-- jQuery Circle-->
+    <link rel="stylesheet" href="css/grasp_mobile_progress_circle-1.0.0.min.css">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="#">
+    <!-- Font Awesome CDN-->
+    <!-- you can replace it by local Font Awesome-->
+    <script src="https://use.fontawesome.com/99347ac47f.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function() {
+   $("#Marketing-id").hide();
+    $("#watch-me").click(function() {
+        $("#Marketing-id").hide();
+        $("#CFA-id").show();
+    });
+	$("#see-me").click(function() {
+        $("#CFA-id").hide();
+        $("#Marketing-id").show();
+    });
+});
+
+function centerModal() {
+    $(this).css('display', 'block');
+    var $dialog = $(this).find(".modal-dialog");
+    var offset = ($(window).height() - $dialog.height()) / 2;
+    // Center modal vertically in window
+    $dialog.css("margin-top", offset);
+}
+
+
+		</script>
+  </head>
+  <body>
+    <!-- Side Navbar -->
+    <nav class="side-navbar">
+      <div class="side-navbar-wrapper">
+        <div class="sidenav-header d-flex align-items-center justify-content-center">
+          <h1>NAGAMMAI PHARMA</h1>
+        </div>
+        <div class="main-menu">
+          <ul id="side-main-menu" class="side-menu list-unstyled">   
+          <li> <a href="#pages-nav-list" data-toggle="collapse" aria-expanded="false"><i class="fa fa-file-text-o" aria-hidden="true"></i>
+                <span>Admin</span>
+                <div class="arrow pull-right"><i class="fa fa-angle-up"></i></div></a>
+                <ul id="pages-nav-list" class="collapse list-unstyled">
+				<li ><a href="users.html"><span>Users</span></a></li>
+                <li> <a href="cfa_titles.html"><span>CFA Titles</span></a></li>
+                <li> <a href="marketing_titles.html"><span>Marketing Titles</span></a></li>
+                <li> <a href="sync.html"><span>Sync</span></a></li>
+                <li> <a href="email_sync.html"><span>Send mail</span></a></li>
+                <li> <a href="received_sync.html"><span>Receive mail</span></a></li>
+				<li> <a href="payment_terms.html"><span>Payment Terms</span></a></li>
+                </ul>
+            </li>	
+			<li> <a href="#pages-nav-list2" data-toggle="collapse" aria-expanded="false"><i class="fa fa-file-text-o" aria-hidden="true"></i>
+                <span>Masters</span>
+                <div class="arrow pull-right"><i class="fa fa-angle-up"></i></div></a>
+                <ul id="pages-nav-list2" class="collapse list-unstyled">
+				  <li ><a href="Master_Supplier .html"><span>Suppliers</span></a></li>
+                  <li ><a href="Master_Manuf.html"><span>Manufacturers</span></a></li>
+                  <li ><a href="Master_Division.html"><span>Divisions</span></a></li>
+				  <li><a href="contact.html"><span>Contacts</span></a></li>
+				  <li class=""><a href="StdOperatingProcedure.html"><span>SOP</span></a></li>
+                </ul>
+            </li>
+		  <li class=""><a href="ViewEvents.html"><span>Appointments</span></a></li>
+		  <li class=""><a href="Email.html"><span>Email</span></a></li>
+		  <li class=""><a href="POGR.html"><span>POGR</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="page home-page">
+      <!-- navbar-->
+      <header class="header">
+        <nav class="navbar">
+          <div class="container-fluid">
+            <div class="navbar-holder d-flex align-items-center justify-content-between">
+              <div class="navbar-header"><a id="toggle-btn" href="#" class="menu-btn"><i class="fa fa-bars" aria-hidden="true"></i> </i></a><a href="index.html" class="navbar-brand">
+                  <!-- <div class="brand-text hidden-sm-down"><strong class="text-primary">Glider Tech Automation</strong></div> --></a></div>
+              <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
+                <li class="nav-item"><a href="login.html" class="nav-link logout">Logout<i class="fa fa-power-off"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      
+      
+      <!-- Updates Section -->
+      <section class="updates section-padding section_top users_admin">
+        <div class="container-fluid">  
+          <!-- Daily Feed-->
+            <header> 
+            <h1 class="h3 display">Add Division Contact</h1>
+          </header>
+                 <div class="form-group">
+            <label class="col-md-4 control-label" for="name">Name</label>
+
+            <div class="col-md-4">
+                <input id="name" name="name" type="text" placeholder="Name" class="form-control input-md" required="">
+            </div>
+        </div>
+        <!-- Email input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="password">Email</label>
+
+            <div class="col-md-4">
+                <input id="email" name="email" type="email" placeholder="Email"
+                       class="form-control input-md" required="">
+            </div>
+        </div>
+        <!-- Paddress input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="name">Permanent Address</label>
+
+            <div class="col-md-4">
+                <input id="paddress" name="paddress" type="text" placeholder="Address" class="form-control input-md"
+                       required="">
+            </div>
+        </div>
+		 <div class="form-group">
+            <label class="col-md-4 control-label" for="name">Mobile Number</label>
+
+            <div class="col-md-4">
+                <input id="mobilenumber" name="mobilenumber" type="text" placeholder="Mobilenumber"
+                       class="form-control input-md" required="">
+            </div>
+        </div>
+		<div class="form-group">
+            <div class="col-md-4">
+                 <input id='watch-me' name='test' type='radio' checked />CFA
+                 <input id='see-me' name='test' type='radio' />Marketing
+            </div>
+        </div>
+		<div id='CFA-id' class="form-group">
+            <label class="col-md-4 control-label" for="name">CFA Tiltle</label>
+
+            <div class="col-md-4">
+                <select class="form-control">
+                                        <option value="0" selected>Select</option>
+                                        <option value="1">expiry & broken claims</option>
+                                        <option value="2">Special Offer claims</option>
+                                        <option value="3">Stock differences</option>
+                                    </select>
+            </div>
+        </div>
+		
+		<div id='Marketing-id' class="form-group">
+            <label class="col-md-4 control-label" for="name">Marketing Tiltle</label>
+
+            <div class="col-md-4">
+                <select class="form-control">
+                                         <option value="0" selected>Select</option>
+                                        <option value="1">Reginal Sales Man(RSM)</option>
+                                        <option value="2">Area Sales Man(ASM) </option>
+                                        <option value="3">Feild Sales Man(FSM)</option>
+                                    </select>
+            </div>
+        </div>
+        
+        <!-- Button (Double) -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="button1id"></label>
+
+            <div class="col-md-8">
+                <button type="submit" class="btn btn-success">Save</button>
+                <a id="cancel" name="cancel" class="btn btn-danger" href="Master_ViewContforDiv.html">
+                    Cancel</a>
+            </div>
+        </div>
+          
+        </div>
+      </section>
+      <footer class="main-footer">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-6">
+              <p>@copyright reserved by NAGAMMAI PHARMA</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- Javascript files-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="js/tether.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.cookie.js"> </script>
+    <script src="js/grasp_mobile_progress_circle-1.0.0.min.js"></script>
+    <script src="js/jquery.nicescroll.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script src="js/charts-home.js"></script>
+    <script src="js/front.js"></script>
+    <script src="js/slimscroll.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('.scroll').slimScroll({});
+      });
+    </script>    
+  </body>
+</html>

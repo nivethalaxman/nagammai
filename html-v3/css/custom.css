@@ -1,0 +1,426 @@
+/*tbody.scroll{
+height: calc(100vh - 375px);
+width: 100%;
+}
+
+.table_front thead, .table_front tbody{
+display:block;
+}
+.table_front thead tr, .table_front tbody tr{
+display: inline-table;
+width: 100%;
+}*/
+
+
+
+
+
+#notifications:hover {
+    color: #2b59a0;
+}
+
+.open>.dropdown-menu {
+    display: block;
+}
+
+.fa-check:before {
+  content: "\f00c";
+}
+
+.bs-searchbox {
+    padding: 4px 14px !important;
+}
+
+
+.dropdown-menu {
+    min-width: 6rem;
+/*    left: -25px !important;*/
+}
+
+
+
+.dropdown-menu.open.show {
+    overflow: unset !important;
+}
+
+.dropdown-menu>li>a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: 400;
+    line-height: 1.42857143;
+    color: #5a5a5a;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
+    color: #1f4a8e;
+    text-decoration: none;
+    background-color: #f5f5f5;
+}
+
+.fa {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+/*    font-family: 'Glyphicons Halflings';*/
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.layout_logo2{
+    text-align: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #2e60ad;
+    color: #ffffff;
+    font-size: 24px !important;
+    font-weight: 400;
+    padding: 8px 10px;	
+}
+
+.bs-searchbox input[type="text"]{
+	margin-top: 0px;
+}
+
+.btn-select{
+	background-color: #fff;
+    border: 2px solid #cccccc;
+    font-size: 12px;
+    color: #757575;
+    outline: none;
+    border-radius: 10px;	
+}
+
+.layout_logo1{
+	text-align: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #2e60ad;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 400;
+    padding: 12px 10px;
+    margin-top: -5px;
+    margin-right: 8px;	
+}
+
+.users_admin header h3{
+    border-bottom: 1px solid #d8d8d8;
+    font-size: 24px;
+    color: #3d3d3d;
+    height: 40px;
+    margin-bottom: 30px;
+
+}
+
+.user-assign header h3{
+    margin-bottom: 20px;
+}
+
+header h3{
+    border-bottom: 1px solid #d8d8d8;
+    font-size: 24px;
+    color: #3d3d3d;
+    height: 40px;
+    margin-bottom: 30px;
+
+}
+
+header h3 .btn-link{
+	color: #2558a8;
+	float: right;
+}
+
+
+/*Button*/
+
+.btn.focus, .btn:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0px rgba(0,123,255,.25);
+}
+
+.btn-link:focus, .btn-link:hover {
+    color: #c8a000;
+    text-decoration: underline;
+    background-color: transparent;
+}
+
+.btn_add i{
+    background: #446bb9;
+    padding: 7px 9px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 14px!important;
+    margin-right: 0px!important;
+    border: 1px solid #446bb9;
+}
+
+.btn_add i:hover {
+    background: #ecbf0a;
+    border: 1px solid #ecbf0a;
+    color: #fff;
+}
+
+.btn_add{
+    float: right;
+}
+
+.icon_clr{
+	color: #646873;
+	font-size: 18px !important;
+}
+
+.icon_clr:hover{
+	color: #1f4a8e;
+}
+
+
+.field_width{
+	float: left;
+	width: 98%;
+}
+
+.mrgn_add{
+	margin-bottom: 20px;
+}
+
+/*Pagination*/
+
+#page_slider h1{
+    font-weight: 500;
+    font-size: 14px;
+    color: #676767;
+    display: inline-block;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 0px;
+    padding: 0px 5px;
+}
+
+#page_slider h1 ul{
+    float: right;
+}
+
+.page-link{
+    padding: 0.5rem 0.75rem;
+    line-height: 1.25;
+    color: #1f4a8e;
+    background-color: rgba(255, 255, 255, 0);
+    border: 0px solid #ddd;
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: -10px;  
+}
+
+.page-link:focus, .page-link:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: #ecbf0a;
+    border-color: unset;
+}
+
+.page-item .page-link {
+    margin-left: 0;
+    border-bottom-left-radius: 0.5rem !important;
+    border-top-left-radius: 0.5rem !important;
+    border-bottom-right-radius: 0.5rem !important;
+    border-top-right-radius: 0.5rem !important;    
+}
+
+li.page-item {
+    margin: 0px 5px;
+}
+
+
+.card_hg{
+    max-height: calc(100vh - 325px);
+    overflow: auto;
+/*    box-shadow: 0px 0px 5px #939393;*/
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border-radius: .25rem;	
+}
+
+.btn_pad{
+	padding: 0px 5px;
+}
+
+/*Table alignment*/
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgb(220, 223, 229);
+}
+
+table thead tr{
+	background-color: #646873;
+}
+
+table thead tr th{
+	font-size: 16px;
+	color: #fff;
+}
+
+table tbody tr td, table tbody tr th{
+	font-size: 13px;
+	color: #3d3d3d;
+}
+
+table tbody tr td a{
+	font-size: 14px !important;
+}
+
+
+.schedule_bg{
+	background: rgb(219, 179, 0);
+	border-radius: 5px;
+	padding: 5px;
+	margin:2px;
+	color:#fff;
+
+}
+
+
+/*Admin_users*/
+
+th.th_sno {
+    width: 10%;
+    text-align: center;
+}
+
+th.th_user {
+    width: 25%;
+    text-align: center;
+}
+
+th.th_email {
+    width: 30%;
+    text-align: center;
+}
+
+th.th_role {
+    width: 15%;
+    text-align: center;
+}
+
+th.th_action {
+    width: 20%;
+    text-align: center;
+}
+
+
+th.td_sno {
+    width: 10%;
+    text-align: center;
+}
+
+td.td_user {
+    width: 25%;
+    text-align: center;
+}
+
+td.td_email {
+    width: 30%;
+    text-align: center;
+}
+
+td.td_role {
+    width: 15%;
+    text-align: center;
+}
+
+td.td_action {
+    width: 20%;
+    text-align: center;
+}
+
+
+/*CFA Titles & Marketing Titles*/
+
+th.th_titles {
+    width: 60%;
+    text-align: center;
+}
+
+th.th_edit {
+    width: 15%;
+    text-align: center;
+}
+
+th.th_delete {
+    width: 15%;
+    text-align: center;
+}
+
+
+td.td_titles {
+    width: 60%;
+    text-align: center;
+}
+
+td.td_edit {
+    width: 15%;
+    text-align: center;
+}
+
+td.td_delete {
+    width: 15%;
+    text-align: center;
+}
+
+/*Sync*/
+
+th.th_titles2 {
+    width: 30%;
+    text-align: center;
+}
+
+th.th_schedule {
+    width: 60%;
+    text-align: center;
+}
+
+th.th_sync {
+    width: 15%;
+    text-align: center;
+}
+
+th.th_settings {
+    width: 15%;
+    text-align: center;
+}
+
+
+td.td_titles2 {
+    width: 30%;
+    text-align: center;
+}
+
+td.td_schedule {
+    width: 30%;
+    text-align: center;
+}
+
+td.td_sync {
+    width: 15%;
+    text-align: center;
+}
+
+td.td_settings {
+    width: 15%;
+    text-align: center;
+}
+
